@@ -2,7 +2,6 @@
 # SotN-RandomStartRoom
 <p align="center">
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square&logo=arduino"></a>
-  <a href="https://en.wikipedia.org/wiki/Prototype"><img alt="Prototype" src="https://img.shields.io/badge/Statut-Prototype-important.svg?style=flat-square&logo=arduino&logoColor=orange"></a>
   <a href="https://github.com/PatFrost/SotN-RandomStartRoom/pulls"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square&logo=arduino&logoColor=brightgreen"></a>
   <a href="https://github.com/PatFrost/SotN-RandomStartRoom/issues"><img alt="Issues" src="https://img.shields.io/badge/Suggest-Open%20Issue-brightgreen.svg?style=flat-square&logo=arduino&logoColor=brightgreen"></a>
   <a href="https://github.com/PatFrost/SotN-RandomStartRoom/issues"><img alt="Issues" src="https://img.shields.io/badge/Bugs-Issues-red.svg?style=flat-square&logo=arduino&logoColor=red"></a>
