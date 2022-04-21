@@ -27,7 +27,7 @@ running under [BizHawk](https://tasvideos.org/BizHawk)
    - [pywin32 303 or higher](https://pypi.org/project/pywin32/)
 
 ## Installation
-Download [SotN-RandomStartRoom-#.zip](https://github.com/PatFrost/SotN-RandomStartRoom/archive/refs/heads/main.zip) and extract all to your BizHawk folder.
+Download [SotN-RandomStartRoom-#.zip](https://github.com/PatFrost/SotN-RandomStartRoom/releases/latest) and extract all to your BizHawk folder.
 File structure should look like this:
 ```
 BizHawk
