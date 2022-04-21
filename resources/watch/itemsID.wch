@@ -1,0 +1,292 @@
+SystemID PSX
+0	S	_	1		INVT ItemID
+03C9B4	b	u	0	MainRAM	HAND Cursor focus
+097A8D	b	u	0	MainRAM	Empty hand ID at cursor 0
+097A8E	b	u	0	MainRAM	HAND Item ID at cursor 1
+097A8F	b	u	0	MainRAM	
+097A90	b	u	0	MainRAM	
+097A91	b	u	0	MainRAM	
+097A92	b	u	0	MainRAM	
+097A93	b	u	0	MainRAM	
+097A94	b	u	0	MainRAM	
+097A95	b	u	0	MainRAM	
+097A96	b	u	0	MainRAM	
+097A97	b	u	0	MainRAM	
+097A98	b	u	0	MainRAM	
+097A99	b	u	0	MainRAM	
+097A9A	b	u	0	MainRAM	
+097A9B	b	u	0	MainRAM	
+097A9C	b	u	0	MainRAM	
+097A9D	b	u	0	MainRAM	
+097A9E	b	u	0	MainRAM	
+097A9F	b	u	0	MainRAM	
+097AA0	b	u	0	MainRAM	
+097AA1	b	u	0	MainRAM	
+097AA2	b	u	0	MainRAM	
+097AA3	b	u	0	MainRAM	
+097AA4	b	u	0	MainRAM	
+097AA5	b	u	0	MainRAM	
+097AA6	b	u	0	MainRAM	
+097AA7	b	u	0	MainRAM	
+097AA8	b	u	0	MainRAM	
+097AA9	b	u	0	MainRAM	
+097AAA	b	u	0	MainRAM	
+097AAB	b	u	0	MainRAM	
+097AAC	b	u	0	MainRAM	
+097AAD	b	u	0	MainRAM	
+097AAE	b	u	0	MainRAM	
+097AAF	b	u	0	MainRAM	
+097AB0	b	u	0	MainRAM	
+097AB1	b	u	0	MainRAM	
+097AB2	b	u	0	MainRAM	
+097AB3	b	u	0	MainRAM	
+097AB4	b	u	0	MainRAM	
+097AB5	b	u	0	MainRAM	
+097AB6	b	u	0	MainRAM	
+097AB7	b	u	0	MainRAM	
+097AB8	b	u	0	MainRAM	
+097AB9	b	u	0	MainRAM	
+097ABA	b	u	0	MainRAM	
+097ABB	b	u	0	MainRAM	
+097ABC	b	u	0	MainRAM	
+097ABD	b	u	0	MainRAM	
+097ABE	b	u	0	MainRAM	
+097ABF	b	u	0	MainRAM	
+097AC0	b	u	0	MainRAM	
+097AC1	b	u	0	MainRAM	
+097AC2	b	u	0	MainRAM	
+097AC3	b	u	0	MainRAM	
+097AC4	b	u	0	MainRAM	
+097AC5	b	u	0	MainRAM	
+097AC6	b	u	0	MainRAM	
+097AC7	b	u	0	MainRAM	
+097AC8	b	u	0	MainRAM	
+097AC9	b	u	0	MainRAM	
+097ACA	b	u	0	MainRAM	
+097ACB	b	u	0	MainRAM	
+097ACC	b	u	0	MainRAM	
+097ACD	b	u	0	MainRAM	
+097ACE	b	u	0	MainRAM	
+097ACF	b	u	0	MainRAM	
+097AD0	b	u	0	MainRAM	
+097AD1	b	u	0	MainRAM	
+097AD2	b	u	0	MainRAM	
+097AD3	b	u	0	MainRAM	
+097AD4	b	u	0	MainRAM	
+097AD5	b	u	0	MainRAM	
+097AD6	b	u	0	MainRAM	
+097AD7	b	u	0	MainRAM	
+097AD8	b	u	0	MainRAM	
+097AD9	b	u	0	MainRAM	
+097ADA	b	u	0	MainRAM	
+097ADB	b	u	0	MainRAM	
+097ADC	b	u	0	MainRAM	
+097ADD	b	u	0	MainRAM	
+097ADE	b	u	0	MainRAM	
+097ADF	b	u	0	MainRAM	
+097AE0	b	u	0	MainRAM	
+097AE1	b	u	0	MainRAM	
+097AE2	b	u	0	MainRAM	
+097AE3	b	u	0	MainRAM	
+097AE4	b	u	0	MainRAM	
+097AE5	b	u	0	MainRAM	
+097AE6	b	u	0	MainRAM	
+097AE7	b	u	0	MainRAM	
+097AE8	b	u	0	MainRAM	
+097AE9	b	u	0	MainRAM	
+097AEA	b	u	0	MainRAM	
+097AEB	b	u	0	MainRAM	
+097AEC	b	u	0	MainRAM	
+097AED	b	u	0	MainRAM	
+097AEE	b	u	0	MainRAM	
+097AEF	b	u	0	MainRAM	
+097AF0	b	u	0	MainRAM	
+097AF1	b	u	0	MainRAM	
+097AF2	b	u	0	MainRAM	
+097AF3	b	u	0	MainRAM	
+097AF4	b	u	0	MainRAM	
+097AF5	b	u	0	MainRAM	
+097AF6	b	u	0	MainRAM	
+097AF7	b	u	0	MainRAM	
+097AF8	b	u	0	MainRAM	
+097AF9	b	u	0	MainRAM	
+097AFA	b	u	0	MainRAM	
+097AFB	b	u	0	MainRAM	
+097AFC	b	u	0	MainRAM	
+097AFD	b	u	0	MainRAM	
+097AFE	b	u	0	MainRAM	
+097AFF	b	u	0	MainRAM	
+097B00	b	u	0	MainRAM	
+097B01	b	u	0	MainRAM	
+097B02	b	u	0	MainRAM	
+097B03	b	u	0	MainRAM	
+097B04	b	u	0	MainRAM	
+097B05	b	u	0	MainRAM	
+097B06	b	u	0	MainRAM	
+097B07	b	u	0	MainRAM	
+097B08	b	u	0	MainRAM	
+097B09	b	u	0	MainRAM	
+097B0A	b	u	0	MainRAM	
+097B0B	b	u	0	MainRAM	
+097B0C	b	u	0	MainRAM	
+097B0D	b	u	0	MainRAM	
+097B0E	b	u	0	MainRAM	
+097B0F	b	u	0	MainRAM	
+097B10	b	u	0	MainRAM	
+097B11	b	u	0	MainRAM	
+097B12	b	u	0	MainRAM	
+097B13	b	u	0	MainRAM	
+097B14	b	u	0	MainRAM	
+097B15	b	u	0	MainRAM	
+097B16	b	u	0	MainRAM	
+097B17	b	u	0	MainRAM	
+097B18	b	u	0	MainRAM	
+097B19	b	u	0	MainRAM	
+097B1A	b	u	0	MainRAM	
+097B1B	b	u	0	MainRAM	
+097B1C	b	u	0	MainRAM	
+097B1D	b	u	0	MainRAM	
+097B1E	b	u	0	MainRAM	
+097B1F	b	u	0	MainRAM	
+097B20	b	u	0	MainRAM	
+097B21	b	u	0	MainRAM	
+097B22	b	u	0	MainRAM	
+097B23	b	u	0	MainRAM	
+097B24	b	u	0	MainRAM	
+097B25	b	u	0	MainRAM	
+097B26	b	u	0	MainRAM	
+097B27	b	u	0	MainRAM	
+097B28	b	u	0	MainRAM	
+097B29	b	u	0	MainRAM	
+097B2A	b	u	0	MainRAM	
+097B2B	b	u	0	MainRAM	
+097B2C	b	u	0	MainRAM	
+097B2D	b	u	0	MainRAM	
+097B2E	b	u	0	MainRAM	
+097B2F	b	u	0	MainRAM	
+097B30	b	u	0	MainRAM	
+097B31	b	u	0	MainRAM	
+097B32	b	u	0	MainRAM	
+097B33	b	u	0	MainRAM	
+097B34	b	u	0	MainRAM	
+097B35	b	u	0	MainRAM	HAND Item ID at cursor 168
+0	S	_	1		
+03C9BC	b	u	0	MainRAM	BODY Cursor focus
+097B36	b	u	0	MainRAM	BODY Unequip ID at cursor 0
+097B37	b	u	0	MainRAM	
+097B38	b	u	0	MainRAM	
+097B39	b	u	0	MainRAM	
+097B3A	b	u	0	MainRAM	
+097B3B	b	u	0	MainRAM	
+097B3C	b	u	0	MainRAM	
+097B3D	b	u	0	MainRAM	
+097B3E	b	u	0	MainRAM	
+097B3F	b	u	0	MainRAM	
+097B40	b	u	0	MainRAM	
+097B41	b	u	0	MainRAM	
+097B42	b	u	0	MainRAM	
+097B43	b	u	0	MainRAM	
+097B44	b	u	0	MainRAM	
+097B45	b	u	0	MainRAM	
+097B46	b	u	0	MainRAM	
+097B47	b	u	0	MainRAM	
+097B48	b	u	0	MainRAM	
+097B49	b	u	0	MainRAM	
+097B4A	b	u	0	MainRAM	
+097B4B	b	u	0	MainRAM	
+097B4C	b	u	0	MainRAM	
+097B4D	b	u	0	MainRAM	
+097B4E	b	u	0	MainRAM	
+097B4F	b	u	0	MainRAM	BODY item ID at cursor 25
+0	S	_	1		
+03C9B8	b	u	0	MainRAM	HEAD Cursor focus
+097B50	b	u	0	MainRAM	HEAD Unequip ID at cursor 0
+097B51	b	u	0	MainRAM	
+097B52	b	u	0	MainRAM	
+097B53	b	u	0	MainRAM	
+097B54	b	u	0	MainRAM	
+097B55	b	u	0	MainRAM	
+097B56	b	u	0	MainRAM	
+097B57	b	u	0	MainRAM	
+097B58	b	u	0	MainRAM	
+097B59	b	u	0	MainRAM	
+097B5A	b	u	0	MainRAM	
+097B5B	b	u	0	MainRAM	
+097B5C	b	u	0	MainRAM	
+097B5D	b	u	0	MainRAM	
+097B5E	b	u	0	MainRAM	
+097B5F	b	u	0	MainRAM	
+097B60	b	u	0	MainRAM	
+097B61	b	u	0	MainRAM	
+097B62	b	u	0	MainRAM	
+097B63	b	u	0	MainRAM	
+097B64	b	u	0	MainRAM	
+097B65	b	u	0	MainRAM	HEAD Unequip ID at cursor 21
+0	S	_	1		
+03C9C0	b	u	0	MainRAM	CLOAK Cursor focus
+097B66	b	u	0	MainRAM	CLOAK Unequip ID at cursor 0
+097B67	b	u	0	MainRAM	
+097B68	b	u	0	MainRAM	
+097B69	b	u	0	MainRAM	
+097B6A	b	u	0	MainRAM	
+097B6B	b	u	0	MainRAM	
+097B6C	b	u	0	MainRAM	
+097B6D	b	u	0	MainRAM	
+097B6E	b	u	0	MainRAM	CLOAK item ID at cursor 8
+0	S	_	1		
+03C9C4	b	u	0	MainRAM	OTHER Cursor focus
+097B6F	b	u	0	MainRAM	OTHER Unequip ID at cursor 0
+097B70	b	u	0	MainRAM	
+097B71	b	u	0	MainRAM	
+097B72	b	u	0	MainRAM	
+097B73	b	u	0	MainRAM	
+097B74	b	u	0	MainRAM	
+097B75	b	u	0	MainRAM	
+097B76	b	u	0	MainRAM	
+097B77	b	u	0	MainRAM	
+097B78	b	u	0	MainRAM	
+097B79	b	u	0	MainRAM	
+097B7A	b	u	0	MainRAM	
+097B7B	b	u	0	MainRAM	
+097B7C	b	u	0	MainRAM	
+097B7D	b	u	0	MainRAM	
+097B7E	b	u	0	MainRAM	Gold Ring
+097B7F	b	u	0	MainRAM	
+097B80	b	u	0	MainRAM	
+097B81	b	u	0	MainRAM	
+097B82	b	u	0	MainRAM	
+097B83	b	u	0	MainRAM	
+097B84	b	u	0	MainRAM	
+097B85	b	u	0	MainRAM	
+097B86	b	u	0	MainRAM	
+097B87	b	u	0	MainRAM	
+097B88	b	u	0	MainRAM	
+097B89	b	u	0	MainRAM	
+097B8A	b	u	0	MainRAM	
+097B8B	b	u	0	MainRAM	
+097B8C	b	u	0	MainRAM	
+097B8D	b	u	0	MainRAM	
+097B8E	b	u	0	MainRAM	OTHER item ID at cursor 31
+0	S	_	1		
+097B8F	b	u	0	MainRAM	BODY item ID at cursor 26
+0	S	_	1		
+0	S	_	1		
+097B90	b	u	0	MainRAM	
+097B91	b	u	0	MainRAM	
+097B92	b	u	0	MainRAM	
+097B93	b	u	0	MainRAM	
+097B94	b	u	0	MainRAM	
+097B95	b	u	0	MainRAM	
+097B96	b	u	0	MainRAM	
+097B97	b	u	0	MainRAM	
+097B98	b	u	0	MainRAM	
+097B99	b	u	0	MainRAM	
+097B9A	b	u	0	MainRAM	
+097B9B	b	u	0	MainRAM	
+097B9C	b	u	0	MainRAM	
+097B9D	b	u	0	MainRAM	
+097B9E	b	u	0	MainRAM	
+0	S	_	1		
+03CAFC	b	u	0	MainRAM	Stereo: 0 - Mono: 1
+03C4E6	w	h	0	MainRAM	SavePalette
+
