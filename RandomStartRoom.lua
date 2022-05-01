@@ -7,7 +7,7 @@ package.loaded["./resources/libs/sotn"] = nil
 SOTN = require("./resources/libs/sotn")
 
 
-local TITLE = "SotN-RandomStartRoom - v1.0.0"
+local TITLE = "SotN-RandomStartRoom - v" .. UTILS.settings.version
 UTILS.TITLE = TITLE
 
 HAS_ROM_HASH = gameinfo.getromhash() ~= ""

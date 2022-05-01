@@ -25,6 +25,7 @@ running under <a href="https://tasvideos.org/BizHawk" target="_blank">BizHawk</a
    - <a href="https://www.python.org/downloads/" target="_blank">Python 3.10 or higher</a> and make sure you select <a href="https://docs.python.org/3/using/windows.html#installation-steps" target="_blank">Add Python to PATH</a>
    - <a href="https://pypi.org/project/psutil/" target="_blank">psutil 5.9.0 or higher</a>
    - <a href="https://pypi.org/project/pywin32/" target="_blank">pywin32 303 or higher</a>
+   - <a href="https://pypi.org/project/requests/" target="_blank">requests 2.27.1 or higher</a>
 
 ## Installation
 Download <a href="https://github.com/PatFrost/SotN-RandomStartRoom/releases/latest" target="_blank">SotN-RandomStartRoom-v#.#.#.zip</a> and extract all to your BizHawk folder.
@@ -49,6 +50,9 @@ BizHawk
  4. On game Symphony of the Night go to gamesave.
  5. On dialog window of SotN-RandomStartRoom press "OK" button.
  6. Now start new game.
+
+## Known issues.
+ - Random start equipment for hands and body does not work immediately! Work after enter in the settings.
 
 ## Recommended cool tools
  - <a href="https://github.com/TalicZealot/SotnRandoTools" target="_blank">SotnRandoTools</a>

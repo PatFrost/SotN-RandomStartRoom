@@ -7,12 +7,13 @@ REM - Python 3.10+      https://www.python.org/downloads/
 REM - pyinstaller 4.10+ https://pypi.org/project/pyinstaller/
 REM - psutil 5.9.0+     https://pypi.org/project/psutil/
 REM - pywin32 303+      https://pypi.org/project/pywin32/
+REM - requests 2.27.1+  https://pypi.org/project/requests/
 
 
 TITLE SotN-RandomStartRoom: Building python lib...
 
 
-SET icon=../../images/maria.ico
+SET icon=../../images/icons/maria.ico
 SET PY=RandomStartRoom.py
 
 CALL pyinstaller.exe --onefile --distpath=build --icon=%icon% %PY% --version-file=build_vf.txt

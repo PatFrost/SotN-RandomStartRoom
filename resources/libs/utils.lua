@@ -19,9 +19,9 @@ local PY_EXE = {'.', 'resources', 'libs', 'python', 'RandomStartRoom'..PY_EXT}
 
 function UTILS.setIconHandle()
     if winapi then
-        winapi.shell_exec(nil, table.concat(PY_EXE, '\\'), UTILS.TITLE, nil, winapi.SW_HIDE)
+        winapi.shell_exec(nil, table.concat(PY_EXE, '\\'), 'icon=true', nil, winapi.SW_HIDE)
     -- else
-        -- local cut = assert(io.popen(table.concat(PY_EXE, '/')..' '..UTILS.TITLE, 'r'))
+        -- local cut = assert(io.popen(table.concat(PY_EXE, '/')..'icon=true', 'r'))
         -- local output = assert(cut:read('*a'))
         -- cut:close()
     end
@@ -97,13 +97,10 @@ end
 
 function UTILS.showHawk()
     if winapi then
-        local hawk = winapi.find_window(nil, gameinfo.getromname()..' [PlayStation] - BizHawk')
+        -- local hawk = winapi.find_window(nil, gameinfo.getromname()..' [PlayStation] - BizHawk')
+        local hawk = winapi.find_window_match('- BizHawk')
         hawk:show()
         hawk:set_foreground()
-        -- client.exactsleep(500)
-        -- hawk:send_message(0x0100, 0x5814, 0)
-        -- client.exactsleep(500)
-        -- hawk:send_message(0x0101, 0x5814, 0)
     end
 end
 
@@ -216,7 +213,9 @@ function UTILS.loadSettings()
     if saved then
         saved = JSON:decode(saved)
         for key, i in pairs(saved) do
-            default[key] = saved[key]
+            if key ~= "version" then
+                default[key] = saved[key]
+            end
         end
     else
         UTILS.saveSettings(default)

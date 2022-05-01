@@ -1,164 +1,65 @@
 
-import os
+from json import loads
+from pathlib import Path
 from sys import argv, executable
+from urllib.parse import parse_qsl
+from traceback import print_exc
 
-TITLE = ""
-try: TITLE = " ".join(argv[1:])
-except: pass #TITLE = "SotN-RandomStartRoom - v1.0.0"
 
-CWD = os.path.dirname(__file__)
+CWD = Path(__file__)
 if executable.endswith("RandomStartRoom.exe"):
-    CWD = os.path.dirname(executable)
-CWD = os.path.abspath(CWD+"../../../../")
+    CWD = Path(executable)
+CWD = CWD.parents[3]
 
-if TITLE:
-    try:
-        #https://www.programcreek.com/python/example/53243/win32gui.LoadImage
-        from win32api import SendMessage
-        from win32gui import FindWindow, LoadImage
-        from win32con import ICON_SMALL, ICON_BIG, IMAGE_ICON, LR_LOADFROMFILE, WM_SETICON
-
-        icon = os.path.join(CWD, "resources", "images", "alucard.ico")
-
-        hwnd = FindWindow(None, TITLE)
-        if hwnd:
-            icon_b = LoadImage(None, icon, IMAGE_ICON, 48, 48, LR_LOADFROMFILE)
-            icon_s = LoadImage(None, icon, IMAGE_ICON, 16, 16, LR_LOADFROMFILE)
-            SendMessage(hwnd, WM_SETICON, ICON_SMALL, icon_s)
-            SendMessage(hwnd, WM_SETICON, ICON_BIG, icon_b)
-            SendMessage(hwnd, WM_SETICON, ICON_BIG, icon_b)
-    except:
-        from traceback import print_exc
-        print_exc()
-        os.system('pause')
-
-else:
-    # Replace defaut maria scene for work with SotN-RandomStartRoom
-    # Because RandomStartRoom will load the cutscene version every time he enters
-
-    # import time
-    # st = time.time()
-
-    import shutil
-    import subprocess
-
-    from tkinter import Tk
-    from tkinter.messagebox import *
-    from tkinter.filedialog import askopenfilename
-
-    try:
-        import psutil
-        import re
-        def findFilesOpenedByEmuHawk(types='.bin', hawk='EmuHawk.exe'):
-            "Return a list of opened files by processes matching 'name'."
-            proc, ls = None, []
-            for p in psutil.process_iter(['name']):
-                if p.info['name'] == hawk:
-                    for nt in p.open_files():
-                        # ls += [nt.path for t in types.split('|') if nt.path.endswith(t)]
-                        # if nt.path.endswith('.bin') or nt.path.endswith('.iso'):
-                        if re.match(f'.*?({types})', nt.path):
-                            ls.append(nt.path)
-                    proc = p
-                    break
-            return proc, ls
-    except:
-        def findFilesOpenedByEmuHawk(*a, **k):
-            return None, []
-
-    def getParent():
-        w = Tk()
-        w.wm_attributes('-topmost', 1)
-        w.withdraw()
-        w.iconbitmap(os.path.join(CWD, "resources", "images", "maria.ico"))
-        return w
-
-    def browse():
-        parent = getParent()
-        filename = askopenfilename(
-            parent=parent,
-            initialdir="",
-            title="SotN-RandomStartRoom - Uncut: Select your bin of SotN",
-            filetypes=(("Bin files", "*.bin"),)
-        )
-        parent.destroy()
-        return filename
-
-    def message(title, msg, dialog=showwarning):
-        parent = getParent()
-        dialog(title, msg, parent=parent)
-        parent.destroy()
+with open(CWD / "resources/default_settings.json") as j:
+    VERSION = loads(j.read()).get("version", "1.0.0")
+TITLE = f"SotN-RandomStartRoom - v{VERSION}"
 
 
-    EmuHawk, files = findFilesOpenedByEmuHawk()
-    if files:
-        src = files[0]
+class Params(dict):
+    def __init__(self): self.update(dict(parse_qsl("".join(argv[1:]))))
+    def __setattr__(self, key, value): self[key] = value
+    def __getattr__(self, key): return self.get(key)
+    def __getitem__(self, key): return self.get(key)
+
+PARAMS = Params()
+
+try:
+    import atexit, ctypes, win32gui
+    def setCursor(cursor=str(CWD / "resources/images/cursors/sword_nw.cur")):
+        hold = win32gui.LoadImage(0, 32512, 2, 0, 0, 0x00008000)
+        hold = ctypes.windll.user32.CopyImage(hold, 2, 0, 0, 0x00004000)
+        hcur = win32gui.LoadImage(0, cursor, 2, 32, 32, 0x00000010)
+        ctypes.windll.user32.SetSystemCursor(hcur, 32512)
+        ctypes.windll.user32.DestroyCursor(hcur)
+        @atexit.register
+        def restore():
+            # Restore the old cursor.
+            ctypes.windll.user32.SetSystemCursor(hold, 32512)
+            ctypes.windll.user32.DestroyCursor(hold)
+    setCursor()
+
+    if PARAMS.icon:
+        HWND = win32gui.FindWindow(0, TITLE)
+        if HWND:
+            from win32api import SendMessage
+            icon = str(CWD / "resources/images/icons/alucard.ico")
+            SendMessage(HWND, 0x0080, 0, win32gui.LoadImage(0, icon, 1, 16, 16, 0x00000010)) # ICON_SMALL
+            SendMessage(HWND, 0x0080, 1, win32gui.LoadImage(0, icon, 1, 48, 48, 0x00000010)) # ICON_BIG
+            PARAMS.waitLuaEnd = 1 # for ICON_BIG work, wait end of main script
+
+    if PARAMS.updater or PARAMS.icon:
+        import lib.updater
+
     else:
-        src = browse()
-        if not src:
-            print('User canceled!')
+        import lib.uncut
 
-    def patch():
-        # unpatch this:  https://github.com/3snowp7im/SotN-Randomizer/blob/c3fadff2cbc16edcb9b13f1f27b4fb2d552f3c93/src/randomize_relics.js#L526
-        try:
-            fh = open(src, "rb")
-            fh.seek(0X0AEAA0)
-            bt = [fh.read(1)]
-            fh.seek(0X119AF4)
-            bt += [fh.read(1)]
-            fh.close()
-            #print(bt)
-
-            if bt == [b'\x1a', b'\x1a']:
-                print('Maria: No patches required.')
-                # message("SotN-RandomStartRoom: Maria Uncut",
-                         # 'No patches are required.\n\n' + \
-                         # 'This rom run with SotN-RandomStartRoom.\n\n' + \
-                         # f'Rom: "{src}"', showinfo)
-
-            elif bt[0] == b'\x00' or bt[1] == b'\x00':
-                # print('Maria: Patches required.')
-                fpath, ext = os.path.splitext(src)
-                uncut = f'{fpath} (Maria Uncut){ext}'
-                shutil.copy(src, uncut)
-
-                fh = open(uncut, "r+b")
-                fh.seek(0X0AEAA0)
-                fh.write((0X1A).to_bytes(1, "little"))
-                fh.seek(0X119AF4)
-                fh.write((0X1A).to_bytes(1, "little"))
-                # fh.seek(0X054F0F46)
-                # fh.write((0x1440).to_bytes(2, "little"))
-                fh.close()
-
-                # print(f'error_recalc.exe "{uncut}"')
-                # print('Please wait...')
-
-                recalc = os.path.join(CWD, "resources", "libs", "python", "tools", "error_recalc.exe")
-                p = subprocess.Popen(f'{recalc} "{uncut}"', shell=True,
-                    stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE)
-                output = p.stdout.read()
-                # output = subprocess.getoutput(f'{recalc} "{uncut}"')
-
-                if not output:
-                    # print(time.time()-st)
-                    message("SotN-RandomStartRoom: Maria Uncut",
-                            'Maria cut scene removed!\n\n' + \
-                            'Use this rom with SotN-RandomStartRoom.\n\n' + \
-                            f'Rom: "{uncut}"')
-                    print('Maria: Cut scene removed.')
-                    # print(f'Use this rom "{uncut}" with SotN-RandomStartRoom')
-                else:
-                    print(f'error_recalc.exe "{output}"')
-                    # message("SotN-RandomStartRoom: Maria Uncut", f'error_recalc.exe "{output}"', showerror)
-            # else:
-                # print('Byte', bt)
-        except:
-            from traceback import print_exc
-            print_exc()
-        os.system('pause')
-
-    if src:
-        src = os.path.normpath(src)
-        patch()
-    # print(time.time()-st)
+    if PARAMS.waitLuaEnd:
+        from time import sleep
+        win32gui.FlashWindowEx(HWND, 0x02, 3, 0)
+        isvisible = win32gui.IsWindowVisible
+        while isvisible(HWND): sleep(1)
+except:
+    print_exc()
+    from os import system
+    system('pause')
