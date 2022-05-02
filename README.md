@@ -1,10 +1,11 @@
 
 # SotN-RandomStartRoom
 <p align="center">
-  <a href="LICENSE" target="_blank"><img alt="License" src="https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square&logo=arduino"></a>
-  <a href="https://github.com/PatFrost/SotN-RandomStartRoom/pulls" target="_blank"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square&logo=arduino&logoColor=brightgreen"></a>
-  <a href="https://github.com/PatFrost/SotN-RandomStartRoom/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/badge/Suggest-Open%20Issue-brightgreen.svg?style=flat-square&logo=arduino&logoColor=brightgreen"></a>
-  <a href="https://github.com/PatFrost/SotN-RandomStartRoom/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/badge/Bugs-Issues-red.svg?style=flat-square&logo=arduino&logoColor=red"></a>
+  <a href="https://github.com/PatFrost/SotN-RandomStartRoom/releases/latest" target="_blank"><img alt="Release" src="https://img.shields.io/github/v/release/PatFrost/SotN-RandomStartRoom.svg?logo=playstation&logoColor=1081c1&sort=semver&style=popout"></a>
+  <a href="LICENSE" target="_blank"><img alt="License" src="https://img.shields.io/badge/License-GPLv3-blue.svg?style=popout&logo=playstation&logoColor=1081c1"></a>
+  <a href="https://github.com/PatFrost/SotN-RandomStartRoom/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/badge/Bugs-Issues-red.svg?style=popout&logo=playstation&logoColor=red"></a>
+  <a href="https://github.com/PatFrost/SotN-RandomStartRoom/pulls" target="_blank"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=popout&logo=playstation&logoColor=brightgreen"></a>
+  <a href="https://github.com/PatFrost/SotN-RandomStartRoom/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/badge/Suggest-Open%20Issue-brightgreen.svg?style=popout&logo=playstation&logoColor=brightgreen"></a>
 </p>
 
 SotN-RandomStartRoom is tool for Castlevania: Symphony of the Night
